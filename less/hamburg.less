@@ -1,34 +1,61 @@
+// main: main.less
 /**
  * Hamburg Menu
  * When the class of 'hamburg' is applied to the body tag of the document, 
  * the sidebar changes it's style to attempt to mimic a menu on a phone app,
  * where the content is overlaying the content, rather than push it.
  */
-@media only screen and (max-width:560px){
-  body.hamburg {
-    #page-wrapper {
-      padding-left: 0;
+
+@media only screen and (max-width: 560px) {
+    body.hamburg {
+        #page-wrapper {
+            padding-left: 0;
+        }
+        #page-wrapper:not(.open) {
+            #conversations-wrapper {
+                position: absolute;
+                left: -200px;
+            }
+            ul.conversations .conversations-title.separator {
+                display: none;
+            }
+            #platforms-wrapper {
+                position: absolute;
+                left: -100px;
+            }
+            ul.platforms .platforms-title.separator {
+                display: none;
+            }
+        }
+        #page-wrapper.open {
+            #platforms-wrapper {
+                position: fixed;
+                ul.sidebar li.sidebar-main {
+                    margin-left: 0px;
+                }
+            }
+            #page-wrapper.open #conversation-wrapper {
+                position: fixed;
+                ul.sidebar li.sidebar-main {
+                    margin-left: 0px;
+                }
+            }
+            #platforms-wrapper ul.platforms li.platforms-main,
+            .row.header .meta {
+                margin-left: 70px;
+            }
+            #platforms-wrapper ul.platforms li.platforms-main,
+            #page-wrapper.open #platforms-wrapper ul.platforms li.platforms-main {
+                transition: margin-left .4s ease 0s;
+            }
+            #conversations-wrapper ul.conversations li.conversations-main,
+            .row.header .meta {
+                margin-left: 70px;
+            }
+            #conversations-wrapper ul.conversations li.conversations-main,
+            #page-wrapper.open #conversations-wrapper ul.conversations li.conversations-main {
+                transition: margin-left .4s ease 0s;
+            }
+        }
     }
-    #page-wrapper:not(.open) {
-      #sidebar-wrapper {
-        position: absolute;
-        left: -100px;     
-      }
-      ul.sidebar .sidebar-title.separator {
-        display: none;
-      }
-    }
-    #page-wrapper.open #sidebar-wrapper {
-      position: fixed;
-      ul.sidebar li.sidebar-main {
-        margin-left: 0px;
-      }
-    }
-    #sidebar-wrapper ul.sidebar li.sidebar-main, .row.header .meta {
-      margin-left: 70px;
-    }
-    #sidebar-wrapper ul.sidebar li.sidebar-main, #page-wrapper.open #sidebar-wrapper ul.sidebar li.sidebar-main {
-      transition: margin-left .4s ease 0s;
-    }
-  }
 }

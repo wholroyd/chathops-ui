@@ -1,128 +1,151 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Dashboard</title>
+    <title>Dashboard</title>
+    
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/chathops.css" rel="stylesheet">
 
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="dist/css/rdash.css" rel="stylesheet">
+    <!-- SCRIPTS -->
+    <!-- build:js js/scripts.js -->
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/chathops.js"></script>
+    <!-- endbuild -->
+    <!-- SCRIPTS -->
 </head>
+
 <body class="hamburg">
-  <div id="page-wrapper" class="open">
+    <div id="page-wrapper">
 
-    <!-- Sidebar -->
-
-    <div id="sidebar-wrapper">
-      <ul class="sidebar">
-        <li class="sidebar-main">
-          <a href="#">
-            Dashboard
-            <span class="menu-icon glyphicon glyphicon-transfer"></span>
-          </a>
-        </li>
-        <li class="sidebar-title"><span>NAVIGATION</span></li>
-        <li class="sidebar-list">
-          <a href="#">Dashboard <span class="menu-icon fa fa-tachometer"></span></a>
-        </li>
-      </ul>
-      <div class="sidebar-footer">
-        <div class="col-xs-4">
-          <a href="https://github.com/rdash/rdash-barebones" target="_blank">
-            Github
-          </a>
-        </div>
-        <div class="col-xs-4">
-          <a href="#" target="_blank">
-            About
-          </a>
-        </div>
-        <div class="col-xs-4">
-          <a href="#">
-            Support
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- End Sidebar -->
-
-    <div id="content-wrapper">
-      <div class="page-content">
-
-        <!-- Header Bar -->
-
-        <div class="row header">
-          <div class="col-xs-12">
-            <div class="user pull-right">
-              <div class="item dropdown">
-                <a href="#" class="dropdown-toggle">
-                  <img src="img/avatar.jpg">
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right">
-                  <li class="dropdown-header">
-                    Joe Bloggs
-                  </li>
-                  <li class="divider"></li>
-                  <li class="link">
-                    <a href="#">
-                      Profile
+        <!-- Platforms -->
+        <div id="platforms-wrapper">
+            <ul class="platforms">
+                <li class="platforms-main" id="toggle-platforms">
+                    <a href="#">ChatHops
+                        <span class="menu-icon glyphicon glyphicon-transfer"></span>
                     </a>
-                  </li>
-                  <li class="link">
-                    <a href="#">
-                      Menu Item
+                </li>
+                <li class="platforms-list">
+                    <a href="#">Dashboard <span class="menu-icon fa fa-tachometer"></span></a>
+                </li>
+            </ul>
+            <div class="platforms-footer">
+                <div class="col-xs-12">
+                    <a href="#">Footer Link</a>
+                </div>
+            </div>
+        </div>
+        <!-- End Platforms -->
+        
+        <!-- Platforms -->
+        <div id="conversations-wrapper">
+            <ul class="conversations">
+                <li class="conversations-main" id="toggle-conversations">
+                    <a href="#">ElectricSky
+                        <span class="menu-icon glyphicon glyphicon-transfer"></span>
                     </a>
-                  </li>
-                  <li class="divider"></li>
-                  <li class="link">
-                    <a href="#">
+                </li>
+                <li class="conversations-title"><span>Groups</span></li>
+                <li class="conversations-list">
+                    <a href="#">#general <span class="menu-icon fa fa-tachometer"></span></a>
+                </li>
+                <li class="conversations-list">
+                    <a href="#">#pulse <span class="menu-icon fa fa-tachometer"></span></a>
+                </li>
+                <li class="conversations-title"><span>Members</span></li>
+                <li class="conversations-list">
+                    <a href="#">@wholroyd <span class="menu-icon fa fa-tachometer"></span></a>
+                </li>
+                <li class="conversations-list">
+                    <a href="#">@curtis <span class="menu-icon fa fa-tachometer"></span></a>
+                </li>
+            </ul>
+            <div class="conversations-footer">
+                <div class="col-xs-12">
+                    <a href="#">Footer Link</a>
+                </div>
+            </div>
+        </div>
+        <!-- End Platforms -->
+
+        <div id="content-wrapper">
+            <div class="page-content">
+
+                <!-- Header Bar -->
+
+                <div class="row header">
+                    <div class="col-xs-12">
+                        <div class="user pull-right">
+                            <div class="item dropdown">
+                                <a href="#" class="dropdown-toggle">
+                                    <img src="img/avatar.jpg">
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li class="dropdown-header">Joe Bloggs
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="link"><a href="#">Profile</a></li>
+                                    <li class="link"><a href="#">Menu Item
+                    </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="link">
+                                        <a href="#">
                       Logout
                     </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="item dropdown">
-               <a href="#" class="dropdown-toggle">
-                  <i class="fa fa-bell-o"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right">
-                  <li class="dropdown-header">
-                    Notifications
-                  </li>
-                  <li class="divider"></li>
-                  <li>
-                    <a href="#">Server Down!</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="meta">
-              <div class="page">
-                Dashboard
-              </div>
-              <div class="breadcrumb-links">
-                Home / Dashboard
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- End Header Bar -->
-
-        <!-- Main Content -->
-        <div class="row">
-            <div class="col-xs-12">
-              <div class="widget">
-                <div class="widget-body">
-                  Get started!
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item dropdown">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="fa fa-bell-o"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li class="dropdown-header">
+                                        Notifications
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="#">Server Down!</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="meta">
+                            <div class="page">
+                                #general
+                            </div>
+                            <div class="breadcrumb-links">
+                                Home / Dashboard
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-          </div>
-      </div><!-- End Page Content -->
-    </div><!-- End Content Wrapper -->
-  </div><!-- End Page Wrapper -->
+
+                <!-- End Header Bar -->
+
+                <!-- Main Content -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="widget">
+                            <div class="widget-body">
+                                Get started!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Page Content -->
+            </div>
+            <!-- End Content Wrapper -->
+        </div>
+        <!-- End Page Wrapper -->
 </body>
+
 </html>

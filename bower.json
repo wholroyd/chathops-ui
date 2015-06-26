@@ -15,7 +15,6 @@
     ],
     "main": [
         "dist/css/rdash.css",
-        "dist/css/rdash.min.css",
         "dist/fonts/montserrat-regular-webfont.eot",
         "dist/fonts/montserrat-regular-webfont.svg",
         "dist/fonts/montserrat-regular-webfont.ttf",
@@ -30,5 +29,10 @@
         "!dist/fonts",
         "!less/"
     ],
-    "dependencies": {}
+    "dependencies": {
+        "jquery": ">= 1.9.1",
+        "jquery.cookie": ">=1.4.1",
+        "bootstrap": "~3.3.5",
+        "font-awesome": "~4.3.0"
+    }
 }

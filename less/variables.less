@@ -1,12 +1,19 @@
- /* #592727 RED */
- /* #2f5927 GREEN */
- /* #30426a BLUE (default)*/
+// main: main.less
 
-/* Sidebar background color */
- @sidebarBaseColor: #30426a;
- /* Sidebar header and footer color */
- @sidebarHeaderColor: darken(@sidebarBaseColor, 2%);
- /* Sidebar title text colour */
- @sidebarTitleColor:  lighten(@sidebarBaseColor, 30%);
-/* Sidebar menu item hover color */
- @sidebarMenuItemHover: #e99d1a;
+/* platforms background color */
+@platformsBaseColor: #30426a;
+/* platforms header and footer color */
+@platformsHeaderColor: darken(@platformsBaseColor, 2%);
+/* platforms title text colour */
+@platformsTitleColor: lighten(@platformsBaseColor, 30%);
+/* platforms menu item hover color */
+@platformsMenuItemHover: #e99d1a;
+
+/* conversations background color */
+@conversationsBaseColor: lighten(@platformsBaseColor, 15%);
+/* conversations header and footer color */
+@conversationsHeaderColor: darken(@conversationsBaseColor, 2%);
+/* conversations title text colour */
+@conversationsTitleColor: lighten(@conversationsBaseColor, 30%);
+/* conversations menu item hover color */
+@conversationsMenuItemHover: lighten(@platformsMenuItemHover, 15%);
