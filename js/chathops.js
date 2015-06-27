@@ -26,9 +26,7 @@ $(function () {
         cacheElements: function () {
             this.$viewport = $(window);
             this.$pageWrapper = $("#page-wrapper");
-            this.$platforms = $("#toggle-platforms");
             this.$platformsWrapper = $("#platforms");
-            this.$conversations = $("#toggle-conversations");
             this.$conversationsWrapper = $("#conversations");
         },
 
@@ -37,8 +35,6 @@ $(function () {
          */
         bindEvents: function () {
             this.$viewport.on('resize', this.viewportResize.bind(this));
-//            this.$platforms.on('click', this.togglePlatforms.bind(this));
-//            this.$conversations.on('click', this.toggleConversations.bind(this));
         },
         
         /**
@@ -47,25 +43,7 @@ $(function () {
         viewportResize: function () {
             this.checkViewport();
         },
-
-//        /**
-//         * toggles platforms sidebar
-//         */
-//        togglePlatforms: function (e) {
-//            this.$platformsWrapper.toggleClass('sidebar-closed');
-//
-//            $.cookie('toggle-platforms', this.$platformsWrapper.hasClass("sidebar-closed"));
-//        },
-//        
-//        /**
-//         * toggles conversations sidebar
-//         */
-//        toggleConversations: function (e) {
-//            this.$conversationsWrapper.toggleClass('sidebar-closed');
-//
-//            $.cookie('toggle-conversations', this.$conversationsWrapper.hasClass("sidebar-closed"));
-//        },
-
+        
         /**
          * Checks the viewport and toggles sidebar if toggled
          */
