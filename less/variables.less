@@ -7,7 +7,7 @@
 /* platforms title text colour */
 @platformsTitleColor: lighten(@platformsBaseColor, 30%);
 /* platforms menu item hover color */
-@platformsMenuItemHover: #e99d1a;
+@platformsMenuItemHover: lighten(@platformsBaseColor, 20%); //#e99d1a;
 
 /* conversations background color */
 @conversationsBaseColor: lighten(@platformsBaseColor, 15%);
@@ -16,4 +16,4 @@
 /* conversations title text colour */
 @conversationsTitleColor: lighten(@conversationsBaseColor, 30%);
 /* conversations menu item hover color */
-@conversationsMenuItemHover: lighten(@platformsMenuItemHover, 15%);
+@conversationsMenuItemHover: lighten(@conversationsBaseColor, 20%);

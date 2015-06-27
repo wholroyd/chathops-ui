@@ -6,141 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Dashboard</title>
-    
+
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/chathops.css" rel="stylesheet">
 
-    <!-- SCRIPTS -->
     <script src="js/scripts.js"></script>
-    <!-- SCRIPTS -->
 </head>
 
-<body class="hamburg">
-    <div id="page-wrapper">
-
-        <!-- Platforms -->
-        <div id="platforms-wrapper">
-            <ul class="platforms">
-                <li class="platforms-main" id="toggle-platforms">
-                    <a href="#">ChatHops
-                        <span class="menu-icon glyphicon glyphicon-transfer"></span>
-                    </a>
-                </li>
-                <li class="platforms-list">
-                    <a href="#">Dashboard <span class="menu-icon fa fa-tachometer"></span></a>
-                </li>
-            </ul>
-            <div class="platforms-footer">
-                <div class="col-xs-12">
-                    <a href="#">Footer Link</a>
-                </div>
+<body>
+    <!-- Platforms -->
+    <div class="container-fluid sidebar-platforms" id="platforms">
+        <ul class="platforms">
+            <li class="sidebar-main" id="toggle-platforms">
+                <a href="#">ChatHops <i class="menu-icon fa fa-bars"></i></a>
+            </li>
+            <li class="sidebar-list sidebar-active"><a href="#">ChatHops <span class="menu-icon fa fa-tachometer"></span></a></li>
+            <li class="sidebar-list sidebar-active"><a href="#">Xunit.net <span class="menu-icon fa fa-tachometer"></span></a></li>
+            <li class="sidebar-list sidebar-active"><a href="#">ElectricSky <span class="menu-icon fa fa-tachometer"></span></a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <div class="col-xs-12">
+                <a href="#">Footer Link</a>
             </div>
         </div>
-        <!-- End Platforms -->
-        
-        <!-- Platforms -->
-        <div id="conversations-wrapper">
-            <ul class="conversations">
-                <li class="conversations-main" id="toggle-conversations">
-                    <a href="#">ElectricSky
-                        <span class="menu-icon glyphicon glyphicon-transfer"></span>
-                    </a>
-                </li>
-                <li class="conversations-title"><span>Groups</span></li>
-                <li class="conversations-list">
-                    <a href="#">#general <span class="menu-icon fa fa-tachometer"></span></a>
-                </li>
-                <li class="conversations-list">
-                    <a href="#">#pulse <span class="menu-icon fa fa-tachometer"></span></a>
-                </li>
-                <li class="conversations-title"><span>Members</span></li>
-                <li class="conversations-list">
-                    <a href="#">@wholroyd <span class="menu-icon fa fa-tachometer"></span></a>
-                </li>
-                <li class="conversations-list">
-                    <a href="#">@curtis <span class="menu-icon fa fa-tachometer"></span></a>
-                </li>
-            </ul>
-            <div class="conversations-footer">
-                <div class="col-xs-12">
-                    <a href="#">Footer Link</a>
-                </div>
+    </div>
+    <!-- End Platforms -->
+
+    <!-- Platforms -->
+    <div class="container-fluid sidebar-conversations" id="conversations">
+        <ul class="conversations">
+            <li class="sidebar-main" id="toggle-conversations">
+                <a href="#">ElectricSky <i class="menu-icon fa fa-comments"></i></a>
+            </li>
+            <li class="sidebar-title"><span>Groups</span></li>
+            <li class="sidebar-list"><a href="#">#general <span class="menu-icon fa fa-tachometer"></span></a></li>
+            <li class="sidebar-list"><a href="#">#pulse <span class="menu-icon fa fa-tachometer"></span></a></li>
+            <li class="sidebar-title"><span>Members</span></li>
+            <li class="sidebar-list"><a href="#">@wholroyd <span class="menu-icon fa fa-tachometer"></span></a></li>
+            <li class="sidebar-list"><a href="#">@curtis <span class="menu-icon fa fa-tachometer"></span></a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <div class="col-xs-12">
+                <a href="#">Footer Link</a>
             </div>
         </div>
-        <!-- End Platforms -->
+    </div>
+    <!-- End Platforms -->
 
-        <div id="content-wrapper">
-            <div class="page-content">
-
-                <!-- Header Bar -->
-
-                <div class="row header">
-                    <div class="col-xs-12">
-                        <div class="user pull-right">
-                            <div class="item dropdown">
-                                <a href="#" class="dropdown-toggle">
-                                    <img src="img/avatar.jpg">
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li class="dropdown-header">Joe Bloggs
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li class="link"><a href="#">Profile</a></li>
-                                    <li class="link"><a href="#">Menu Item
-                    </a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li class="link">
-                                        <a href="#">
-                      Logout
-                    </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="item dropdown">
-                                <a href="#" class="dropdown-toggle">
-                                    <i class="fa fa-bell-o"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li class="dropdown-header">
-                                        Notifications
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a href="#">Server Down!</a>
-                                    </li>
-                                </ul>
-                            </div>
+    <div class="container-fluid content" id="content">
+        <!-- Main Content -->
+        <div class="row">
+            <div class="row header">
+                <div class="col-xs-12">
+                    <div class="user pull-right">
+                        <div class="item dropdown">
+                            <a href="#" class="dropdown-toggle">
+                                <img src="img/avatar.jpg">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li class="dropdown-header">
+                                    Joe Bloggs
+                                </li>
+                                <li class="divider"></li>
+                                <li class="link"><a href="#">Profile</a></li>
+                                <li class="link"><a href="#">Menu Item</a></li>
+                                <li class="divider"></li>
+                                <li class="link"><a href="#">Logout</a></li>
+                            </ul>
                         </div>
-                        <div class="meta">
-                            <div class="page">
-                                #general
-                            </div>
-                            <div class="breadcrumb-links">
-                                Home / Dashboard
-                            </div>
+                        <div class="item dropdown">
+                            <a href="#" class="dropdown-toggle">
+                                <i class="fa fa-bell-o"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li class="dropdown-header">Notifications</li>
+                                <li class="divider"></li>
+                                <li><a href="#">Server Down!</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="meta">
+                        <div class="page">
+                            Dashboard
                         </div>
                     </div>
                 </div>
-
-                <!-- End Header Bar -->
-
-                <!-- Main Content -->
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="widget">
-                            <div class="widget-body">
-                                Get started!
-                            </div>
-                        </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="widget">
+                    <div class="widget-body">
+                        Get started!
                     </div>
                 </div>
-                <!-- End Page Content -->
             </div>
-            <!-- End Content Wrapper -->
         </div>
-        <!-- End Page Wrapper -->
+        <!-- End Page Content -->
+    </div>
 </body>
 
 </html>

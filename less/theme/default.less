@@ -1,0 +1,76 @@
+@import "../variables.less";
+
+.sidebar-platforms {
+    background-color: @platformsBaseColor;
+    ul {
+        .sidebar-main a {
+            color: #b2bfdc;
+            background: @platformsHeaderColor;
+        }
+        li {
+            .sidebar-active {
+                 a:after {
+                    left: 300px;
+                    top: 50%;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                    border-color: rgba(136, 183, 213, 0);
+                    border-right-color: #f3f3f3;
+                    border-width: 30px;
+                    margin-top: -30px;
+                }
+                a {
+                    background-color: lighten(@platformsBaseColor, 20%);
+                }
+            }
+            .sidebar-title {
+                color: @platformsTitleColor;
+            }
+        }
+    }
+    .sidebar-footer {
+        background: @platformsHeaderColor;
+    }
+}
+
+.sidebar-conversations {
+    background-color: @conversationsBaseColor;
+    ul {
+        .sidebar-main a {
+            color: #b2bfdc;
+            background-color: @conversationsHeaderColor;
+        }
+        li {
+            .sidebar-active {
+                &:after {
+                    left: 300px;
+                    top: 50%;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                    border-color: rgba(136, 183, 213, 0);
+                    border-right-color: #f3f3f3;
+                    border-width: 30px;
+                    margin-top: -30px;
+                }
+                a {
+                    background-color: lighten(@conversationsBaseColor, 20%);
+                }
+                
+            }
+            .sidebar-title {
+                color: @conversationsTitleColor;
+            }
+        }
+    }
+    .sidebar-footer {
+        background: @conversationsHeaderColor;
+    }
+}

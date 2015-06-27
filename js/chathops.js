@@ -27,7 +27,9 @@ $(function () {
             this.$viewport = $(window);
             this.$pageWrapper = $("#page-wrapper");
             this.$platforms = $("#toggle-platforms");
+            this.$platformsWrapper = $("#platforms");
             this.$conversations = $("#toggle-conversations");
+            this.$conversationsWrapper = $("#conversations");
         },
 
         /**
@@ -38,7 +40,7 @@ $(function () {
             this.$platforms.on('click', this.togglePlatforms.bind(this));
             this.$conversations.on('click', this.toggleConversations.bind(this));
         },
-
+        
         /**
          * trigger checkviewport on resize
          */
@@ -50,18 +52,18 @@ $(function () {
          * toggles platforms sidebar
          */
         togglePlatforms: function (e) {
-            this.$pageWrapper.toggleClass('open-platforms');
+            this.$platformsWrapper.toggleClass('sidebar-closed');
 
-            $.cookie('toggle-platforms', this.$pageWrapper.hasClass("open-platforms"));
+            $.cookie('toggle-platforms', this.$platformsWrapper.hasClass("sidebar-closed"));
         },
         
         /**
          * toggles conversations sidebar
          */
         toggleConversations: function (e) {
-            this.$pageWrapper.toggleClass('open-conversations');
+            this.$conversationsWrapper.toggleClass('sidebar-closed');
 
-            $.cookie('toggle-conversations', this.$pageWrapper.hasClass("open-conversations"));
+            $.cookie('toggle-conversations', this.$conversationsWrapper.hasClass("sidebar-closed"));
         },
 
         /**
@@ -70,30 +72,30 @@ $(function () {
         checkViewport: function () {
             if (getWidth() >= MOBILE_VIEW) {
                 if ($.cookie("toggle-platforms") === undefined) {
-                    this.$pageWrapper.addClass("open-platforms");
+                    this.$platformsWrapper.addClass("sidebar-closed");
                 } else {
                     if ($.cookie('toggle-platforms') == 'true') {
-                        this.$pageWrapper.addClass("open-platforms");
+                        this.$platformsWrapper.addClass("sidebar-closed");
                     } else {
-                        this.$pageWrapper.removeClass("open-platforms");
+                        this.$platformsWrapper.removeClass("sidebar-closed");
                     }
                 }
             } else {
-                this.$pageWrapper.removeClass("open-platforms");
+                this.$platformsWrapper.removeClass("sidebar-closed");
             }
             
             if (getWidth() >= MOBILE_VIEW) {
                 if ($.cookie("toggle-conversations") === undefined) {
-                    this.$pageWrapper.addClass("open-conversations");
+                    this.$conversationsWrapper.addClass("sidebar-closed");
                 } else {
                     if ($.cookie('toggle-conversations') == 'true') {
-                        this.$pageWrapper.addClass("open-conversations");
+                        this.$conversationsWrapper.addClass("sidebar-closed");
                     } else {
-                        this.$pageWrapper.removeClass("open-conversations");
+                        this.$conversationsWrapper.removeClass("sidebar-closed");
                     }
                 }
             } else {
-                this.$pageWrapper.removeClass("open-conversations");
+                this.$conversationsWrapper.removeClass("sidebar-closed");
             }
         },
 
