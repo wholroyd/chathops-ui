@@ -1,3 +1,18 @@
+/* platforms background color */
+/* platforms header and footer color */
+/* platforms title text colour */
+/* platforms menu item hover color */
+/* conversations background color */
+/* conversations header and footer color */
+/* conversations title text colour */
+/* conversations menu item hover color */
+div.content {
+  position: relative;
+  height: 100vh;
+  padding: 0px;
+  overflow: auto;
+}
+
 /**
  * Hamburg Menu
  * When the class of 'hamburg' is applied to the body tag of the document, 
@@ -251,6 +266,202 @@ div.input-mask {
 /* conversations header and footer color */
 /* conversations title text colour */
 /* conversations menu item hover color */
+.sidebar,
+.sidebar-platforms,
+.sidebar-conversations {
+  margin-left: -180px;
+  position: relative;
+  width: 250px;
+  height: 100vh;
+  float: left;
+  padding: 0px;
+  transition: all .6s ease 0s;
+  background: #f3f3f3;
+}
+.sidebar ul,
+.sidebar-platforms ul,
+.sidebar-conversations ul {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-indent: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.sidebar ul li a,
+.sidebar-platforms ul li a,
+.sidebar-conversations ul li a {
+  color: #fff;
+  display: block;
+  float: left;
+  text-decoration: none;
+  width: 250px;
+}
+.sidebar ul .sidebar-main,
+.sidebar-platforms ul .sidebar-main,
+.sidebar-conversations ul .sidebar-main {
+  height: 65px;
+}
+.sidebar ul .sidebar-main a,
+.sidebar-platforms ul .sidebar-main a,
+.sidebar-conversations ul .sidebar-main a {
+  font-size: 18px;
+  line-height: 60px;
+  color: #333333;
+  background: #ffffff;
+}
+.sidebar ul .sidebar-main a:hover,
+.sidebar-platforms ul .sidebar-main a:hover,
+.sidebar-conversations ul .sidebar-main a:hover {
+  cursor: pointer;
+}
+.sidebar ul .sidebar-main .menu-icon,
+.sidebar-platforms ul .sidebar-main .menu-icon,
+.sidebar-conversations ul .sidebar-main .menu-icon {
+  float: right;
+  font-size: 18px;
+  padding-right: 28px;
+  line-height: 60px;
+}
+.sidebar ul .sidebar-title,
+.sidebar-platforms ul .sidebar-title,
+.sidebar-conversations ul .sidebar-title {
+  font-size: 12px;
+  line-height: 40px;
+  text-transform: uppercase;
+  transition: all .6s ease 0s;
+  display: none;
+  height: 0px;
+  margin-left: 25px;
+}
+.sidebar ul .sidebar-active a:after,
+.sidebar-platforms ul .sidebar-active a:after,
+.sidebar-conversations ul .sidebar-active a:after {
+  right: 0%;
+  margin-top: 10px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-right-color: #333333;
+  border-width: 10px;
+}
+.sidebar ul .sidebar-list,
+.sidebar-platforms ul .sidebar-list,
+.sidebar-conversations ul .sidebar-list {
+  height: 40px;
+}
+.sidebar ul .sidebar-list a,
+.sidebar-platforms ul .sidebar-list a,
+.sidebar-conversations ul .sidebar-list a {
+  text-indent: 25px;
+  font-size: 15px;
+  color: #b2bfdc;
+  line-height: 40px;
+}
+.sidebar ul .sidebar-list a:hover,
+.sidebar-platforms ul .sidebar-list a:hover,
+.sidebar-conversations ul .sidebar-list a:hover {
+  color: #fff;
+  border-left: 3px solid #e99d1a;
+  text-indent: 22px;
+  background: darker(#f3f3f3, 2%);
+}
+.sidebar ul .sidebar-list a:hover .menu-icon,
+.sidebar-platforms ul .sidebar-list a:hover .menu-icon,
+.sidebar-conversations ul .sidebar-list a:hover .menu-icon {
+  text-indent: 25px;
+}
+.sidebar ul .sidebar-list .menu-icon,
+.sidebar-platforms ul .sidebar-list .menu-icon,
+.sidebar-conversations ul .sidebar-list .menu-icon {
+  float: right;
+  padding-right: 29px;
+  line-height: 40px;
+  width: 70px;
+}
+.sidebar .sidebar-footer,
+.sidebar-platforms .sidebar-footer,
+.sidebar-conversations .sidebar-footer {
+  position: absolute;
+  height: 40px;
+  bottom: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  transition: all .6s ease 0s;
+  text-align: center;
+  display: none;
+  background: #2d3e63;
+}
+.sidebar .sidebar-footer div a,
+.sidebar-platforms .sidebar-footer div a,
+.sidebar-conversations .sidebar-footer div a {
+  color: #b2bfdc;
+  font-size: 12px;
+  line-height: 43px;
+}
+.sidebar .sidebar-footer div a:hover,
+.sidebar-platforms .sidebar-footer div a:hover,
+.sidebar-conversations .sidebar-footer div a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+.sidebar:hover,
+.sidebar-platforms:hover,
+.sidebar-conversations:hover {
+  margin-left: 0px;
+}
+.sidebar:hover ul .sidebar-title,
+.sidebar-platforms:hover ul .sidebar-title,
+.sidebar-conversations:hover ul .sidebar-title {
+  display: inline;
+  height: 35px;
+}
+.sidebar:hover ul .sidebar-title.separator,
+.sidebar-platforms:hover ul .sidebar-title.separator,
+.sidebar-conversations:hover ul .sidebar-title.separator {
+  display: block;
+  height: 2px;
+  margin: 13px 0;
+  background: #2d3e63;
+}
+.sidebar:hover ul .sidebar-list a:hover,
+.sidebar-platforms:hover ul .sidebar-list a:hover,
+.sidebar-conversations:hover ul .sidebar-list a:hover {
+  border-left: 3px solid #e99d1a;
+}
+.sidebar:hover ul .sidebar-list .sidebar-active,
+.sidebar-platforms:hover ul .sidebar-list .sidebar-active,
+.sidebar-conversations:hover ul .sidebar-list .sidebar-active {
+  background-color: #f3f3f3;
+}
+.sidebar:hover .sidebar-footer,
+.sidebar-platforms:hover .sidebar-footer,
+.sidebar-conversations:hover .sidebar-footer {
+  display: block;
+}
+.sidebar-platforms {
+  z-index: 999;
+}
+.sidebar-conversations {
+  z-index: 888;
+}
+
+/* platforms background color */
+/* platforms header and footer color */
+/* platforms title text colour */
+/* platforms menu item hover color */
+/* conversations background color */
+/* conversations header and footer color */
+/* conversations title text colour */
+/* conversations menu item hover color */
 
 /**
  * Widgets
@@ -347,285 +558,4 @@ div.input-mask {
 .widget .widget-content .title {
   font-size: 28px;
   display: block;
-}
-
-/* platforms background color */
-/* platforms header and footer color */
-/* platforms title text colour */
-/* platforms menu item hover color */
-/* conversations background color */
-/* conversations header and footer color */
-/* conversations title text colour */
-/* conversations menu item hover color */
-div.content {
-  position: relative;
-  height: 100vh;
-  padding: 0px;
-  overflow: auto;
-}
-
-/* platforms background color */
-/* platforms header and footer color */
-/* platforms title text colour */
-/* platforms menu item hover color */
-/* conversations background color */
-/* conversations header and footer color */
-/* conversations title text colour */
-/* conversations menu item hover color */
-.sidebar,
-.sidebar-platforms,
-.sidebar-conversations {
-  margin-left: -180px;
-  position: relative;
-  width: 250px;
-  height: 100vh;
-  float: left;
-  padding: 0px;
-  transition: all .6s ease 0s;
-  background: #f3f3f3;
-}
-.sidebar ul,
-.sidebar-platforms ul,
-.sidebar-conversations ul {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-indent: 20px;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-.sidebar ul li a,
-.sidebar-platforms ul li a,
-.sidebar-conversations ul li a {
-  color: #fff;
-  display: block;
-  float: left;
-  text-decoration: none;
-  width: 250px;
-}
-.sidebar ul .sidebar-main,
-.sidebar-platforms ul .sidebar-main,
-.sidebar-conversations ul .sidebar-main {
-  height: 65px;
-}
-.sidebar ul .sidebar-main a,
-.sidebar-platforms ul .sidebar-main a,
-.sidebar-conversations ul .sidebar-main a {
-  font-size: 18px;
-  line-height: 60px;
-  color: #333333;
-  background: #ffffff;
-}
-.sidebar ul .sidebar-main a:hover,
-.sidebar-platforms ul .sidebar-main a:hover,
-.sidebar-conversations ul .sidebar-main a:hover {
-  cursor: pointer;
-}
-.sidebar ul .sidebar-main .menu-icon,
-.sidebar-platforms ul .sidebar-main .menu-icon,
-.sidebar-conversations ul .sidebar-main .menu-icon {
-  float: right;
-  font-size: 18px;
-  padding-right: 28px;
-  line-height: 60px;
-}
-.sidebar ul .sidebar-title,
-.sidebar-platforms ul .sidebar-title,
-.sidebar-conversations ul .sidebar-title {
-  font-size: 12px;
-  line-height: 40px;
-  text-transform: uppercase;
-  transition: all .6s ease 0s;
-  display: none;
-  height: 0px;
-  margin-left: 25px;
-}
-.sidebar ul .sidebar-list,
-.sidebar-platforms ul .sidebar-list,
-.sidebar-conversations ul .sidebar-list {
-  height: 40px;
-}
-.sidebar ul .sidebar-list a,
-.sidebar-platforms ul .sidebar-list a,
-.sidebar-conversations ul .sidebar-list a {
-  text-indent: 25px;
-  font-size: 15px;
-  color: #b2bfdc;
-  line-height: 40px;
-}
-.sidebar ul .sidebar-list a:hover,
-.sidebar-platforms ul .sidebar-list a:hover,
-.sidebar-conversations ul .sidebar-list a:hover {
-  color: #fff;
-  border-left: 3px solid #e99d1a;
-  text-indent: 22px;
-  background: darker(#f3f3f3, 2%);
-}
-.sidebar ul .sidebar-list a:hover .menu-icon,
-.sidebar-platforms ul .sidebar-list a:hover .menu-icon,
-.sidebar-conversations ul .sidebar-list a:hover .menu-icon {
-  text-indent: 25px;
-}
-.sidebar ul .sidebar-list .menu-icon,
-.sidebar-platforms ul .sidebar-list .menu-icon,
-.sidebar-conversations ul .sidebar-list .menu-icon {
-  float: right;
-  padding-right: 29px;
-  line-height: 40px;
-  width: 70px;
-}
-.sidebar .sidebar-footer,
-.sidebar-platforms .sidebar-footer,
-.sidebar-conversations .sidebar-footer {
-  position: absolute;
-  height: 40px;
-  bottom: 0;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  transition: all .6s ease 0s;
-  text-align: center;
-  display: none;
-  background: #2d3e63;
-}
-.sidebar .sidebar-footer div a,
-.sidebar-platforms .sidebar-footer div a,
-.sidebar-conversations .sidebar-footer div a {
-  color: #b2bfdc;
-  font-size: 12px;
-  line-height: 43px;
-}
-.sidebar .sidebar-footer div a:hover,
-.sidebar-platforms .sidebar-footer div a:hover,
-.sidebar-conversations .sidebar-footer div a:hover {
-  color: #ffffff;
-  text-decoration: none;
-}
-.sidebar:hover,
-.sidebar-platforms:hover,
-.sidebar-conversations:hover {
-  margin-left: 0px;
-}
-.sidebar:hover ul .sidebar-title,
-.sidebar-platforms:hover ul .sidebar-title,
-.sidebar-conversations:hover ul .sidebar-title {
-  display: inline;
-  height: 35px;
-}
-.sidebar:hover ul .sidebar-title.separator,
-.sidebar-platforms:hover ul .sidebar-title.separator,
-.sidebar-conversations:hover ul .sidebar-title.separator {
-  display: block;
-  height: 2px;
-  margin: 13px 0;
-  background: #2d3e63;
-}
-.sidebar:hover ul .sidebar-list a:hover,
-.sidebar-platforms:hover ul .sidebar-list a:hover,
-.sidebar-conversations:hover ul .sidebar-list a:hover {
-  border-left: 3px solid #e99d1a;
-}
-.sidebar:hover ul .sidebar-list .sidebar-active,
-.sidebar-platforms:hover ul .sidebar-list .sidebar-active,
-.sidebar-conversations:hover ul .sidebar-list .sidebar-active {
-  background-color: #f3f3f3;
-}
-.sidebar:hover ul .sidebar-list .sidebar-active a:after,
-.sidebar-platforms:hover ul .sidebar-list .sidebar-active a:after,
-.sidebar-conversations:hover ul .sidebar-list .sidebar-active a:after {
-  right: 100%;
-  top: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-color: rgba(136, 183, 213, 0);
-  border-right-color: #88b7d5;
-  border-width: 30px;
-  margin-top: -30px;
-}
-.sidebar:hover .sidebar-footer,
-.sidebar-platforms:hover .sidebar-footer,
-.sidebar-conversations:hover .sidebar-footer {
-  display: block;
-}
-.sidebar-platforms {
-  z-index: 999;
-}
-.sidebar-conversations {
-  z-index: 888;
-}
-
-/* platforms background color */
-/* platforms header and footer color */
-/* platforms title text colour */
-/* platforms menu item hover color */
-/* conversations background color */
-/* conversations header and footer color */
-/* conversations title text colour */
-/* conversations menu item hover color */
-.sidebar-platforms {
-  background-color: #30426a;
-}
-.sidebar-platforms ul .sidebar-main a {
-  color: #b2bfdc;
-  background: #2d3e63;
-}
-.sidebar-platforms ul li .sidebar-active a:after {
-  left: 300px;
-  top: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-color: rgba(136, 183, 213, 0);
-  border-right-color: #f3f3f3;
-  border-width: 30px;
-  margin-top: -30px;
-}
-.sidebar-platforms ul li .sidebar-active a {
-  background-color: #506eb0;
-}
-.sidebar-platforms ul li .sidebar-title {
-  color: #738bc0;
-}
-.sidebar-platforms .sidebar-footer {
-  background: #2d3e63;
-}
-.sidebar-conversations {
-  background-color: #48639f;
-}
-.sidebar-conversations ul .sidebar-main a {
-  color: #b2bfdc;
-  background-color: #455e98;
-}
-.sidebar-conversations ul li .sidebar-active:after {
-  left: 300px;
-  top: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-color: rgba(136, 183, 213, 0);
-  border-right-color: #f3f3f3;
-  border-width: 30px;
-  margin-top: -30px;
-}
-.sidebar-conversations ul li .sidebar-active a {
-  background-color: #859ac8;
-}
-.sidebar-conversations ul li .sidebar-title {
-  color: #a8b7d8;
-}
-.sidebar-conversations .sidebar-footer {
-  background: #455e98;
 }

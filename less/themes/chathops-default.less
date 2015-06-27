@@ -1,0 +1,38 @@
+@import "../variables.less";
+.sidebar-platforms {
+    background-color: @platformsBaseColor;
+    ul {
+        .sidebar-main a {
+            color: #b2bfdc;
+            background: @platformsHeaderColor;
+        }
+        .sidebar-active a:after {
+            border-right-color: @conversationsBaseColor;
+        }
+        .sidebar-title {
+            color: @platformsTitleColor;
+        }
+    }
+    .sidebar-footer {
+        background: @platformsHeaderColor;
+    }
+}
+
+.sidebar-conversations {
+    background-color: @conversationsBaseColor;
+    ul {
+        .sidebar-main a {
+            color: #b2bfdc;
+            background-color: @conversationsHeaderColor;
+        }
+        .sidebar-active a:after {
+            border-right-color: #f3f3f3;
+        }
+        .sidebar-title {
+            color: @conversationsTitleColor;
+        }
+    }
+    .sidebar-footer {
+        background: @conversationsHeaderColor;
+    }
+}

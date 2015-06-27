@@ -16,7 +16,8 @@ var paths  = {
     index: 'index.html',  
     fonts: 'fonts/**.*',
     fonts_bower: 'bower_components/**/*.{ttf,woff,eof,svg}',
-    styles: 'less/**/*.less',
+    styles: 'less/*.less',
+    styles_theme: 'less/themes/*.less',
     styles_bower: 'bower_components/**/*.css'
 };
 
@@ -113,6 +114,10 @@ gulp.task('less', function () {
         .pipe(less())
         .pipe(concat('chathops.css'))
         .pipe(gulp.dest('dist/css'));
+    
+    gulp.src(paths.styles_theme)
+        .pipe(less())
+        .pipe(gulp.dest('dist/css'));
 
     return gulp.src('dist/css/chathops.css')
         .pipe(minifyCss())
@@ -140,6 +145,8 @@ gulp.task('watch', function () {
     gulp.watch([paths.index], ['usemin', 'livereload']);
     gulp.watch([paths.scripts], ['usemin', 'livereload']);
     gulp.watch([paths.styles], ['less', 'usemin', 'livereload']);
+    gulp.watch([paths.styles_theme], ['less', 'usemin', 'livereload']);
+    gulp.watch([paths.styles_bower], ['less', 'usemin', 'livereload']);
     gulp.watch([paths.images], ['copy-images', 'livereload']);
 });
 
