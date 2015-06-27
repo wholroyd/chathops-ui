@@ -2,6 +2,7 @@
 
 
 .sidebar {
+    margin-left: -180px;
     position: relative;
     width: 250px;
     height: 100vh;
@@ -48,10 +49,12 @@
         }
         .sidebar-title {
             font-size: 12px;
-            height: 35px;
             line-height: 40px;
             text-transform: uppercase;
             transition: all .6s ease 0s;
+            display: none;
+            height: 0px;
+            margin-left: 25px;
         }
         .sidebar-list {
             height: 40px;
@@ -87,6 +90,7 @@
         margin: 0;
         transition: all .6s ease 0s;
         text-align: center;
+        display: none;
         background: @platformsHeaderColor;
         div {
             a {
@@ -102,15 +106,13 @@
     }
 }
 
-.sidebar-closed {
-    .sidebar;
-    margin-left: -180px;
+.sidebar:hover {
+    margin-left: 0px;
     ul {
-        bottom: 0;
         .sidebar-title {
-            display: none;
-            height: 0px;
-            text-indent: -100px;
+            display: inline;
+            height: 35px;
+            //text-indent: -100px;
         }
         .sidebar-title.separator {
             display: block;
@@ -122,23 +124,34 @@
             a:hover {
                 border-left: 3px solid #e99d1a;
             }
+            .sidebar-active {
+                background-color: #f3f3f3;   
+            }
+            .sidebar-active a:after {
+                right: 100%;
+                top: 50%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+                border-color: rgba(136, 183, 213, 0);
+                border-right-color: #88b7d5;
+                border-width: 30px;
+                margin-top: -30px;
+            }
         }
     }
     .sidebar-footer {
-        display: none;
+        display: block;
     }
 }
 
-.sidebar-closed:hover {
-    margin-left: 0px;   
-}
-
-.sidebar-platforms {
-    .sidebar;
+.sidebar-platforms:extend(.sidebar all) {
     z-index: 999;
 }
 
-.sidebar-conversations {
-    .sidebar;
+.sidebar-conversations:extend(.sidebar all) {
     z-index: 888;
 }

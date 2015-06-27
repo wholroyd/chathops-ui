@@ -37,8 +37,8 @@ $(function () {
          */
         bindEvents: function () {
             this.$viewport.on('resize', this.viewportResize.bind(this));
-            this.$platforms.on('click', this.togglePlatforms.bind(this));
-            this.$conversations.on('click', this.toggleConversations.bind(this));
+//            this.$platforms.on('click', this.togglePlatforms.bind(this));
+//            this.$conversations.on('click', this.toggleConversations.bind(this));
         },
         
         /**
@@ -48,23 +48,23 @@ $(function () {
             this.checkViewport();
         },
 
-        /**
-         * toggles platforms sidebar
-         */
-        togglePlatforms: function (e) {
-            this.$platformsWrapper.toggleClass('sidebar-closed');
-
-            $.cookie('toggle-platforms', this.$platformsWrapper.hasClass("sidebar-closed"));
-        },
-        
-        /**
-         * toggles conversations sidebar
-         */
-        toggleConversations: function (e) {
-            this.$conversationsWrapper.toggleClass('sidebar-closed');
-
-            $.cookie('toggle-conversations', this.$conversationsWrapper.hasClass("sidebar-closed"));
-        },
+//        /**
+//         * toggles platforms sidebar
+//         */
+//        togglePlatforms: function (e) {
+//            this.$platformsWrapper.toggleClass('sidebar-closed');
+//
+//            $.cookie('toggle-platforms', this.$platformsWrapper.hasClass("sidebar-closed"));
+//        },
+//        
+//        /**
+//         * toggles conversations sidebar
+//         */
+//        toggleConversations: function (e) {
+//            this.$conversationsWrapper.toggleClass('sidebar-closed');
+//
+//            $.cookie('toggle-conversations', this.$conversationsWrapper.hasClass("sidebar-closed"));
+//        },
 
         /**
          * Checks the viewport and toggles sidebar if toggled
