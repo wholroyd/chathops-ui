@@ -1,16 +1,9 @@
-# RDash rdash-ui
+# chathops-ui
 ## Responsive, bloat free, bootstrap powered admin style dashboard!
 
-Extending from the [original repository](https://github.com/Ehesp/Responsive-Dashboard), rdash-ui is a stylish admin dashboard without the plugins/bloat which many premium dashboard themes come with. It is fully responsive using Bootstrap 3 framework as the base. All animations are CSS3.
+Extending from the [original repository](https://github.com/rdash/rdash-ui), chathops-ui is a stylish admin dashboard without the plugins/bloat which many premium dashboard themes come with. It is fully responsive using Bootstrap 3 framework as the base. All animations are CSS3.
 
-Check out a live example, in AngularJS!
-
-> This repository provides only the stying needed to implement RDash into your project.
-
-## Current Framework Implementations
-
-* with AngularJS: [rdash-angular](https://github.com/rdash/rdash-angular)
-* with jQuery: [rdash-jquery](https://github.com/rdash/rdash-jquery)
+> This repository provides only the stying needed to implement chathops-ui into your project.
 
 ## Usage
 ### Requirements
@@ -18,20 +11,14 @@ Check out a live example, in AngularJS!
 * [Bower](http://bower.io)
 * [Gulp](http://bower.io)
 
-### Installation
-rdash-ui is available as a bower project, or available to download youself.
+### Getting Started
 
-#### Bower
-`bower install rdash-ui`
-or include as a project dependancy in your `bower.json`:
 ```
-"dependencies": {
-    "rdash-ui": "*"
-},
+npm install
+bower install
+gulp build
+gulp
 ```
-
-## Wiki
-For full documentation on the dashboard, visit the [Wiki]().
 
 ## Contributing
 > Do not use the `dist` directory for contributions, please edit the `less` files.
