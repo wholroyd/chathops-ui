@@ -3,28 +3,18 @@
 
 Extending from the [original repository](https://github.com/rdash/rdash-ui), chathops-ui is a stylish admin dashboard without the plugins/bloat which many premium dashboard themes come with. It is fully responsive using Bootstrap 3 framework as the base. All animations are CSS3.
 
-> This repository provides only the stying needed to implement chathops-ui into your project.
+> This repository provides only the stying needed to implement chathops-ui interface, not the logic behind the application.
 
-## Usage
 ### Requirements
 * [NodeJS](http://nodejs.org/) (with [NPM](https://www.npmjs.org/))
 * [Bower](http://bower.io)
 * [Gulp](http://bower.io)
 
-### Getting Started
-
-```
-npm install
-bower install
-gulp build
-gulp
-```
-
-## Contributing
+### Contributing
 > Do not use the `dist` directory for contributions, please edit the `less` files.
 
-1. Clone the repository: `git clone https://github.com/rdash/rdash-ui.git`
-2. Install the NodeJS depencanies: `sudo npm install`. This should automatically run a `bower install` command.
+1. Clone the repository: `git clone https://github.com/wholroyd/chathops-ui.git`
+2. Install the NodeJS depencanies: `npm install`. This should automatically run a `bower install` command. You may need to use sudo on linux.
 3. Run the gulp build task: `gulp build`.
 4. Run the gulp default task: `gulp`. This will build any changes made automatically, and also run a live reload server on [http://localhost:8888](http://localhost:8080).
 
