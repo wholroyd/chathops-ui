@@ -112,16 +112,16 @@ gulp.task('copy-fonts', function () {
 gulp.task('less', function () {
     gulp.src(paths.styles)
         .pipe(less())
-        .pipe(concat('chathops.css'))
+        .pipe(concat('chathops-base.css'))
         .pipe(gulp.dest('dist/css'));
     
     gulp.src(paths.styles_theme)
         .pipe(less())
         .pipe(gulp.dest('dist/css'));
 
-    return gulp.src('dist/css/chathops.css')
+    return gulp.src('dist/css/chathops-base.css')
         .pipe(minifyCss())
-        .pipe(rename('chathops.min.css'))
+        .pipe(rename('chathops-base.min.css'))
         .pipe(gulp.dest('dist/css/'))
 });
 

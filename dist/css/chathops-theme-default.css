@@ -1,0 +1,67 @@
+.sidebar-platforms {
+  background-color: #30426a;
+}
+.sidebar-platforms ul .sidebar-main a {
+  color: #b2bfdc;
+  background: #2b3b5f;
+}
+.sidebar-platforms ul .sidebar-active a:after {
+  border-right-color: #48639f;
+}
+.sidebar-platforms ul .sidebar-list a .menu-icon {
+  text-indent: 30px;
+}
+.sidebar-platforms ul .sidebar-list a:hover .menu-icon {
+  text-indent: 33px;
+}
+.sidebar-platforms ul .sidebar-title {
+  color: #738bc0;
+}
+.sidebar-platforms .sidebar-footer {
+  background: #2b3b5f;
+}
+.sidebar-conversations {
+  background-color: #48639f;
+}
+.sidebar-conversations ul .sidebar-main a {
+  color: #b2bfdc;
+  background-color: #435c94;
+}
+.sidebar-conversations ul .sidebar-active a:after {
+  border-right-color: #f3f3f3;
+}
+.sidebar-conversations ul .sidebar-list a .menu-icon {
+  text-indent: 30px;
+}
+.sidebar-conversations ul .sidebar-list a:hover .menu-icon {
+  text-indent: 33px;
+}
+.sidebar-conversations ul .sidebar-title {
+  color: #a8b7d8;
+}
+.sidebar-conversations .sidebar-footer {
+  background: #435c94;
+}
+.content-header {
+  background-color: #ffffff;
+  color: #5a5a5a;
+}
+.content-footer {
+  background-color: #ffffff;
+}
+.content-footer div {
+  padding: 0px;
+}
+.content-footer div .input-group button {
+  background-color: #ffffff;
+  color: #5a5a5a;
+}
+.content-footer div a {
+  color: #b2bfdc;
+  font-size: 12px;
+  line-height: 43px;
+}
+.content-footer div a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}

@@ -1,0 +1,99 @@
+@platformsBaseColor:            #30426a;
+@platformsHeaderColor:          darken(@platformsBaseColor, 3%);
+@platformsTitleColor:           lighten(@platformsBaseColor, 30%);
+@platformsMenuItemHover:        lighten(@platformsBaseColor, 20%); //#e99d1a;
+
+@conversationsBaseColor:        lighten(@platformsBaseColor, 15%);
+@conversationsHeaderColor:      darken(@conversationsBaseColor, 3%);
+@conversationsTitleColor:       lighten(@conversationsBaseColor, 30%);
+@conversationsMenuItemHover:    lighten(@conversationsBaseColor, 20%);
+
+@contentBaseColor:              #F3F3F3;
+@contentHeaderColor:            lighten(@contentBaseColor, 5%);
+@contentTitleColor:             darken(@contentBaseColor, 60%);
+
+.sidebar-platforms {
+    background-color: @platformsBaseColor;
+    ul {
+        .sidebar-main a {
+            color: #b2bfdc;
+            background: @platformsHeaderColor;
+        }
+        .sidebar-active a:after {
+            border-right-color: @conversationsBaseColor;
+        }
+        .sidebar-list a {
+            .menu-icon {
+                text-indent: 30px;
+            }
+        }
+        .sidebar-list a:hover {
+            .menu-icon {
+                text-indent: 33px;
+            }
+        }
+        .sidebar-title {
+            color: @platformsTitleColor;
+        }
+    }
+    .sidebar-footer {
+        background: @platformsHeaderColor;
+    }
+}
+
+.sidebar-conversations {
+    background-color: @conversationsBaseColor;
+    ul {
+        .sidebar-main a {
+            color: #b2bfdc;
+            background-color: @conversationsHeaderColor;
+        }
+        .sidebar-active a:after {
+            border-right-color: #f3f3f3;
+        }
+        .sidebar-list a {
+            .menu-icon {
+                text-indent: 30px;
+            }
+        }
+        .sidebar-list a:hover {
+            .menu-icon {
+                text-indent: 33px;
+            }
+        }
+        .sidebar-title {
+            color: @conversationsTitleColor;
+        }
+    }
+    .sidebar-footer {
+        background: @conversationsHeaderColor;
+    }
+}
+
+.content {
+    &-header {
+        background-color: @contentHeaderColor;
+        color: @contentTitleColor;
+    }
+    &-footer {
+        background-color: @contentHeaderColor;
+        div {
+            .input-group {
+                button {
+                    background-color: @contentHeaderColor;
+                    color: @contentTitleColor;
+                }
+            }
+            padding: 0px;
+            a {
+                color: #b2bfdc;
+                font-size: 12px;
+                line-height: 43px;
+            }
+            a:hover {
+                color: #ffffff;
+                text-decoration: none;
+            }
+        }
+    }
+}

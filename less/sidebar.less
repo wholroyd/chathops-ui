@@ -49,12 +49,12 @@
         }
         .sidebar-title {
             font-size: 12px;
-            line-height: 40px;
+            line-height: 20px;
             text-transform: uppercase;
             transition: all .6s ease 0s;
-            display: none;
+            display: list-item;
             height: 0px;
-            margin-left: 25px;
+            margin-left: 6px;
         }
         .sidebar-active a:after {
             right: 0%;
@@ -79,11 +79,11 @@
             }
             a:hover {
                 color: #fff;
-                border-left: 3px solid #e99d1a;
-                text-indent: 22px;
+                border-right: 3px solid #e99d1a;
+                text-indent: 25px;
                 background: darker(#f3f3f3, 2%);
                 .menu-icon {
-                    text-indent: 25px;
+                    text-indent: 30px;
                 }
             }
             .menu-icon {
@@ -123,9 +123,8 @@
     margin-left: 0px;
     ul {
         .sidebar-title {
-            display: inline;
-            height: 35px;
-            //text-indent: -100px;
+            display: list-item;
+            height: 20px;
         }
         .sidebar-title.separator {
             display: block;
@@ -135,12 +134,11 @@
         }
         .sidebar-list {
             a:hover {
-                border-left: 3px solid #e99d1a;
+                border-right: 3px solid #e99d1a;
             }
             .sidebar-active {
                 background-color: #f3f3f3;   
             }
-
         }
     }
     .sidebar-footer {

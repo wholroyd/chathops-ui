@@ -7,15 +7,19 @@
 
     <title>Dashboard</title>
 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/chathops.css" rel="stylesheet">
-    <link href="css/chathops-default.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/chathops-base.css">
+    <!-- build:css css/chathops-nanoscroller.css -->
+    <link rel="stylesheet" href="bower_components/nanoscroller/bin/css/nanoscroller.css">
+    <!-- endbuild -->
+    <link rel="stylesheet" href="css/chathops-theme-default.css">
     
-    <!-- build:js js/scripts.js -->
+    <!-- build:js js/chathops.js -->
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="bower_components/jquery.cookie/jquery.cookie.js"></script>
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="bower_components/nanoscroller/bin/javascripts/jquery.nanoscroller.js"></script>
     <script type="text/javascript" src="js/chathops.js"></script>
     <!-- endbuild -->
 </head>
@@ -25,7 +29,7 @@
     <div class="container-fluid sidebar sidebar-platforms" id="platforms">
         <ul class="platforms">
             <li class="sidebar-main" id="toggle-platforms">
-                <a href="#">ChatHops <i class="menu-icon fa fa-bars"></i></a>
+                <a href="#">ChatHops <span class="menu-icon fa fa-bars"></span></a>
             </li>
             <li class="sidebar-list"><a href="#">ChatHops <span class="menu-icon">C</span></a></li>
             <li class="sidebar-list"><a href="#">Xunit.net <span class="menu-icon">X</span></a></li>
@@ -34,7 +38,7 @@
         </ul>
         <div class="sidebar-footer">
             <div class="col-xs-12">
-                <a href="#">Footer Link</a>
+                <a href="#">+</a>
             </div>
         </div>
     </div>
@@ -55,7 +59,7 @@
         </ul>
         <div class="sidebar-footer">
             <div class="col-xs-12">
-                <a href="#">Footer Link</a>
+                <a href="#">+</a>
             </div>
         </div>
     </div>
@@ -63,52 +67,63 @@
 
     <div class="container-fluid content" id="content">
         <!-- Main Content -->
-        <div class="row">
-            <div class="row header">
-                <div class="col-xs-12">
-                    <div class="user pull-right">
-                        <div class="item dropdown">
-                            <a href="#" class="dropdown-toggle">
-                                <img src="img/avatar.jpg">
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right">
-                                <li class="dropdown-header">
-                                    Joe Bloggs
-                                </li>
-                                <li class="divider"></li>
-                                <li class="link"><a href="#">Profile</a></li>
-                                <li class="link"><a href="#">Menu Item</a></li>
-                                <li class="divider"></li>
-                                <li class="link"><a href="#">Logout</a></li>
-                            </ul>
-                        </div>
-                        <div class="item dropdown">
-                            <a href="#" class="dropdown-toggle">
-                                <i class="fa fa-bell-o"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right">
-                                <li class="dropdown-header">Notifications</li>
-                                <li class="divider"></li>
-                                <li><a href="#">Server Down!</a></li>
-                            </ul>
-                        </div>
+        <div class="content-header">
+            <div class="col-xs-12">
+                <div class="user pull-right">
+                    <div class="item dropdown" id="user">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" href="#user">
+                            <img src="img/avatar.jpg">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li class="dropdown-header">Joe Bloggs</li>
+                            <li class="divider"></li>
+                            <li class="link"><a href="#">Profile</a></li>
+                            <li class="link"><a href="#">Menu Item</a></li>
+                            <li class="divider"></li>
+                            <li class="link"><a href="#">Logout</a></li>
+                        </ul>
                     </div>
-                    <div class="meta">
-                        <div class="page">
-                            Dashboard
-                        </div>
+                    <div class="item dropdown" id="notifications">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" href="#notifications">
+                            <i class="fa fa-bell-o"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li class="dropdown-header">Notifications</li>
+                            <li class="divider"></li>
+                            <li><a href="#">Server Down!</a></li>
+                        </ul>
                     </div>
                 </div>
+                <div class="title">
+                    Dashboard
+                </div>
             </div>
+        </div>
+        <div class="content-body">
+            <div class="content-widget">
+                Get started!
+            </div>
+            <div class="content-widget">
+                <div class="content-widget-avatar">
+                    <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg">
+                </div>
+                    <p>that mongodb thing looks good, huh? tiny master db, and huge document store</p>
+                    <time datetime="2009-11-13T20:00">Timothy • 51 min</time>            
+            </div>
+        </div>
+        <div class="content-footer">
             <div class="col-xs-12">
-                <div class="widget">
-                    <div class="widget-body">
-                        Get started!
-                    </div>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter Text Here...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-info" type="button">SEND</button>
+                        <button class="btn btn-info" type="button"><span class="fa fa-arrow-up"></span></button>
+                    </span>
                 </div>
             </div>
         </div>
         <!-- End Page Content -->
+
     </div>
 </body>
 
