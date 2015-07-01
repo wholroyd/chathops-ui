@@ -1,13 +1,12 @@
 {
-    "name": "rdash-ui",
-    "description": "Bloat free responsive admin style dashboard.",
+    "name": "chathops-ui",
+    "description": "Bloat free responsive chat interface.",
     "version": "1.0.1",
-    "homepage": "https://rdash.github.io/rdash-ui/",
     "repository": {
         "type": "git",
-        "url": "git://github.com/rdash/rdash-ui.git"
+        "url": "git://github.com/wholroyd/chathops-ui.git"
     },
-    "license": "MIT",
+    "license": "Apache License 2.0",
     "keywords": [
         "responsive",
         "dashboard",

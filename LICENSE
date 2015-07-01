@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 The MIT License (MIT)
 
-Copyright (c) 2014 rdash
+Copyright (c) 2015 ElectricSky
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -209,7 +208,7 @@ THE SOFTWARE.
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright {yyyy} {name of copyright owner}
+   Copyright 2015 ElectricSky
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -222,5 +221,3 @@ THE SOFTWARE.
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-
->>>>>>> a95a966d89f986f9c06acb22e3a025b55b6fc9f3

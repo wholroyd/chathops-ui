@@ -7,8 +7,8 @@ var gulp = require('gulp'),
     minifyCss = require('gulp-minify-css'),
     minifyJs = require('gulp-uglify'),
     rename = require('gulp-rename'),
-    rimraf = require('gulp-rimraf'),
-    watch = require('gulp-watch');
+    watch = require('gulp-watch'),
+    del = require('del');
 
 var paths  = {
     scripts: 'js/**.js',
@@ -45,42 +45,21 @@ gulp.task('livereload', function () {
  */
 gulp.task('clean', ['clean-css', 'clean-images', 'clean-fonts', 'clean-dist']);
 
-gulp.task('clean-css', function () {
-    return gulp.src('dist/css/*', {
-            read: false
-        })
-        .pipe(rimraf({
-            force: true
-        }));
+gulp.task('clean-css', function (cb) {
+    del('dist/css/*', cb);
 });
 
-gulp.task('clean-images', function () {
-    return gulp.src('dist/img/*', {
-            read: false
-        })
-        .pipe(rimraf({
-            force: true
-        }));
+gulp.task('clean-images', function (cb) {
+    del('dist/img/*', cb);
 });
 
-gulp.task('clean-fonts', function () {
-    return gulp.src('dist/fonts/*', {
-            read: false
-        })
-        .pipe(rimraf({
-            force: true
-        }));
+gulp.task('clean-fonts', function (cb) {
+    del('dist/fonts/*', cb);
 });
 
-gulp.task('clean-dist', function () {
-    return gulp.src('dist', {
-            read: false
-        })
-        .pipe(rimraf({
-            force: true
-        }));
+gulp.task('clean-dist', function (cb) {
+    del('dist/*', cb);
 });
-
 
 /*
  * Copy fonts to dist directory
@@ -122,7 +101,7 @@ gulp.task('less', function () {
     return gulp.src('dist/css/chathops-base.css')
         .pipe(minifyCss())
         .pipe(rename('chathops-base.min.css'))
-        .pipe(gulp.dest('dist/css/'))
+        .pipe(gulp.dest('dist/css/'));
 });
 
 gulp.task('usemin', function () {
@@ -136,7 +115,7 @@ gulp.task('usemin', function () {
         .pipe(gulp.dest('dist/'));
 });
 
-/**
+/*
  * Watch src and execute tasks when changes are made
  */
 gulp.task('watch', function () {
