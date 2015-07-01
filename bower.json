@@ -1,37 +1,38 @@
 {
-    "name": "chathops-ui",
-    "description": "Bloat free responsive chat interface.",
-    "version": "1.0.1",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/wholroyd/chathops-ui.git"
-    },
-    "license": "Apache-2.0",
-    "keywords": [
-        "responsive",
-        "dashboard",
-        "admin"
-    ],
-    "main": [
-        "dist/css/rdash.css",
-        "dist/fonts/montserrat-regular-webfont.eot",
-        "dist/fonts/montserrat-regular-webfont.svg",
-        "dist/fonts/montserrat-regular-webfont.ttf",
-        "dist/fonts/montserrat-regular-webfont.woff"
-    ],
-    "ignore": [
-        "**/**.*",
-        "!LICENSE",
-        "!bower.json",
-        "!README.md",
-        "!dist/css",
-        "!dist/fonts",
-        "!less/"
-    ],
-    "dependencies": {
-        "jquery": ">= 1.9.1",
-        "jquery.cookie": ">=1.4.1",
-        "bootstrap": "~3.3.5",
-        "font-awesome": "~4.3.0"
-    }
+  "name": "chathops-ui",
+  "description": "Bloat free responsive chat interface.",
+  "version": "1.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wholroyd/chathops-ui.git"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "responsive",
+    "dashboard",
+    "admin"
+  ],
+  "main": [
+    "dist/css/rdash.css",
+    "dist/fonts/montserrat-regular-webfont.eot",
+    "dist/fonts/montserrat-regular-webfont.svg",
+    "dist/fonts/montserrat-regular-webfont.ttf",
+    "dist/fonts/montserrat-regular-webfont.woff"
+  ],
+  "ignore": [
+    "**/**.*",
+    "!LICENSE",
+    "!bower.json",
+    "!README.md",
+    "!dist/css",
+    "!dist/fonts",
+    "!less/"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.9.1",
+    "jquery.cookie": ">=1.4.1",
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.3.0",
+    "nanoscroller": "~0.8.7"
+  }
 }
