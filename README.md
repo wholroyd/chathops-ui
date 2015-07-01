@@ -26,7 +26,10 @@ All project distribution files will be located within the `dist` directory. Use 
 3. Send the pull requests into the projects `develop` branch.
 
 ## Credits
+These folks were involved with the original rdash-ui project from which this project is derived:
 * [Elliot Hesp](https://github.com/Ehesp)
 * [Leonel Samayoa](https://github.com/lsamayoa)
 * [Mathew Goldsborough](https://github.com/mgoldsborough)
 * [Ricardo Pascua Jr](https://github.com/rdpascua)
+This gentleman designed the chat elements that ChatHops is using:
+* [Miguel Cerejo](https://github.com/SrPatinhas)
