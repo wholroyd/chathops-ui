@@ -98,7 +98,7 @@
   padding: 0px;
 }
 .content-footer div .input-group input {
-  height: 40px;
+  height: 41px;
   border-radius: 0px;
   border-style: none;
 }
@@ -121,6 +121,47 @@
 .content-footer div a:hover {
   color: #ffffff;
   text-decoration: none;
+}
+.content-body-item {
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  float: left;
+  width: 100%;
+}
+.content-body-item > .message {
+  background: white;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+}
+.content-body-item > .message > p {
+  font-size: 13px;
+  margin: 0 0 0.2rem 0;
+}
+.content-body-item > .message > time {
+  font-size: 11px;
+  color: #ccc;
+}
+.content-body-item > .avatar {
+  position: relative;
+  width: 64px;
+}
+.content-body-item > .avatar img {
+  height: 64px;
+  width: 60px;
+}
+.content-body-item > .avatar:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 5px solid #FFF;
+  border-left-color: rgba(0, 0, 0, 0);
+  border-bottom-color: rgba(0, 0, 0, 0);
 }
 .msg_container_base {
   background: #e5e5e5;
@@ -153,10 +194,39 @@
   overflow: hidden;
   display: flex;
 }
+.msg_receive {
+  padding-left: 0;
+  margin-left: 0;
+}
 .avatar {
   position: relative;
 }
 .base_receive > .avatar:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 5px solid #FFF;
+  border-left-color: rgba(0, 0, 0, 0);
+  border-bottom-color: rgba(0, 0, 0, 0);
+}
+.message {
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  float: left;
+  width: 100%;
+}
+.message > .avatar {
+  position: relative;
+}
+.message > .avatar img {
+  height: 60px;
+  width: 60px;
+}
+.message > .avatar:after {
   content: "";
   position: absolute;
   top: 0;

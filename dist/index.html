@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Dashboard</title>
+    <title>ChatHops</title>
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/chathops-base.css">
     <link rel="stylesheet" href="css/chathops-nanoscroller.css"/>
     <link rel="stylesheet" href="css/chathops-theme-default.css">
-    
+
     <script src="js/chathops.js"></script>
 </head>
 
@@ -92,15 +92,28 @@
             </div>
         </div>
         <div class="content-body">
-            <div class="content-widget">
-                Get started!
+            <!-- This would be used for general group or conversation notifications and warnings -->
+            <div class="content-body-item">
+                <div class="message">
+                    <p>that mongodb thing looks good, huh?
+                    tiny master db, and huge document store</p>
+                    <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                </div>
             </div>
-            <div class="content-widget">
-                <div class="content-widget-avatar">
+            <!-- This would be used for actual communications -->
+            <div class="content-body-item"> <!-- msg_container base_receive -->
+                <div class="avatar">
                     <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg">
                 </div>
-                    <p>that mongodb thing looks good, huh? tiny master db, and huge document store</p>
-                    <time datetime="2009-11-13T20:00">Timothy • 51 min</time>            
+                <div class="message">
+                    <p>that mongodb thing looks good, huh?
+                    tiny master db, and huge document store<br />
+                    that mongodb thing looks good, huh?
+                    tiny master db, and huge document store<br />
+                    that mongodb thing looks good, huh?
+                    tiny master db, and huge document store</p>
+                    <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                </div>
             </div>
         </div>
         <div class="content-footer">
@@ -114,7 +127,6 @@
                 </div>
             </div>
         </div>
-        <!-- End Page Content -->
 
     </div>
 </body>

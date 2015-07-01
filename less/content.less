@@ -99,7 +99,7 @@
             .input-group
             {
                 input {
-                    height: 40px;
+                    height: 41px;
                     border-radius: 0px;
                     border-style: none;
                 }
@@ -124,6 +124,47 @@
                 color: #ffffff;
                 text-decoration: none;
             }
+        }
+    }
+    &-body-item {
+        padding: 10px;
+        overflow: hidden;
+        display: flex;
+        float: left;
+        width: 100%;
+        & > .message {
+            background: white;
+            padding: 10px;
+            border-radius: 2px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            max-width:100%;  
+            & > p {
+                font-size: 13px;
+                margin: 0 0 0.2rem 0;
+              }
+            & > time {
+                font-size: 11px;
+                color: #ccc;
+            }
+        }
+        & > .avatar {
+            position: relative;
+            width: 64px;
+            img {
+                height: 64px;
+                width: 60px;
+            }
+        }
+        & > .avatar:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border: 5px solid #FFF;
+            border-left-color: rgba(0, 0, 0, 0);
+            border-bottom-color: rgba(0, 0, 0, 0);
         }
     }
 }
@@ -159,6 +200,10 @@
     overflow: hidden;
     display: flex;
 }
+.msg_receive{
+    padding-left:0;
+    margin-left:0;
+}
 .avatar {
     position: relative;
 }
@@ -174,8 +219,33 @@
     border-bottom-color: rgba(0, 0, 0, 0);
 }
 
+// msg_container base_receive
+.message {
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+    float: left;
+    width: 100%;
+    & > .avatar {
+        position: relative;
+        img {
+            height: 60px;
+            width: 60px;
+        }
+    }
+    & > .avatar:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border: 5px solid #FFF;
+        border-left-color: rgba(0, 0, 0, 0);
+        border-bottom-color: rgba(0, 0, 0, 0);
+    }
+}
 
-// main: main.less
 
 @import "mixins.less";
 

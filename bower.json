@@ -6,7 +6,7 @@
         "type": "git",
         "url": "git://github.com/wholroyd/chathops-ui.git"
     },
-    "license": "Apache License 2.0",
+    "license": "Apache-2.0",
     "keywords": [
         "responsive",
         "dashboard",
